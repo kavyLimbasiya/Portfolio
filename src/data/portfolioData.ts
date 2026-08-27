@@ -371,30 +371,6 @@ export const PERSONAL_WORKS: PersonalWork[] = [
   },
 ];
 
-export const TESTIMONIALS: Testimonial[] = [
-  {
-    id: 't1',
-    quote: 'Kavy turned our launch film into something people actually finished watching. Rare.',
-    author: 'CREATIVE LEAD',
-    role: 'Creative Director',
-    company: 'A24'
-  },
-  {
-    id: 't2',
-    quote: 'The identity system is a knife. Every asset feels cut from the same block.',
-    author: 'BRAND DIRECTOR',
-    role: 'Head of Design',
-    company: 'SONOS'
-  },
-  {
-    id: 't3',
-    quote: "We got 3 award nominations from one campaign. That's the ROI.",
-    author: 'HEAD OF MARKETING',
-    role: 'Marketing Lead',
-    company: 'OFF-WHITE'
-  }
-];
-
 export const SERVICES: ServiceItem[] = [
   {
     id: 's01',

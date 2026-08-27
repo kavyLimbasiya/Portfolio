@@ -12,7 +12,7 @@ import { FeaturedProjects } from './components/FeaturedProjects';
 import { CertificatesSection } from './components/CertificatesSection';
 import { PersonalSection } from './components/PersonalSection';
 import { ShowcaseSection } from './components/ShowcaseSection';
-import { TestimonialsSection } from './components/TestimonialsSection';
+
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { ProjectModal } from './components/ProjectModal';
@@ -107,7 +107,7 @@ export default function App() {
             />
 
             {/* 11: Voices & Testimonials */}
-            <TestimonialsSection />
+
 
             {/* 12: Contact Form & Coordinates */}
             <ContactSection />

@@ -54,7 +54,10 @@ export const AboutSection: React.FC = () => {
 
             {/* Statement text matching Screenshot 4 */}
             <p className="text-xs sm:text-sm md:text-[15px] font-mono-code text-neutral-400 leading-relaxed max-w-xl">
-              10+ years of building brand systems, editorial layouts, motion reels and film cuts. Clients range from indie record labels to Fortune 500 launches. I obsess over typography, cadence and the split second before an idea breaks.
+              19-year-old Graphic Designer & Video Editor based in Rajkot, Gujarat, India.
+              I create visually impactful designs and engaging edits that blend creativity with precision.
+              Passionate about transforming ideas into powerful visual experiences
+
             </p>
 
             {/* 4-Item Credentials Matrix matching Screenshot 4 */}
@@ -69,25 +72,16 @@ export const AboutSection: React.FC = () => {
                 </p>
               </div>
 
-              {/* Clients */}
-              <div className="space-y-1.5 pb-4 sm:pb-0 border-b sm:border-b-0 border-neutral-900">
-                <span className="text-[11px] font-mono-code text-neutral-500 tracking-widest uppercase block">
-                  CLIENTS
-                </span>
-                <p className="text-xs sm:text-sm font-mono-code font-bold text-white tracking-wider uppercase">
-                  A24 · NIKE · SONOS · OFF-WHITE
-                </p>
-              </div>
+              {/* Clients*/}
+              {/*              <div className="space-y-1.5 pb-4 sm:pb-0 border-b sm:border-b-0 border-neutral-900">*/}
+              {/*                <span className="text-[11px] font-mono-code text-neutral-500 tracking-widest uppercase block">*/}
+              {/*                  CLIENTS*/}
+              {/*                </span>*/}
+              {/*                <p className="text-xs sm:text-sm font-mono-code font-bold text-white tracking-wider uppercase">*/}
+              {/*                  A24 · NIKE · SONOS · OFF-WHITE*/}
+              {/*                </p>*/}
+              {/*              </div>*/}
 
-              {/* Awards */}
-              <div className="space-y-1.5 pt-2">
-                <span className="text-[11px] font-mono-code text-neutral-500 tracking-widest uppercase block">
-                  AWARDS
-                </span>
-                <p className="text-xs sm:text-sm font-mono-code font-bold text-white tracking-wider uppercase">
-                  AWWWARDS · FWA · CSSDA
-                </p>
-              </div>
 
               {/* Stack */}
               <div className="space-y-1.5 pt-2">
@@ -95,7 +89,7 @@ export const AboutSection: React.FC = () => {
                   STACK
                 </span>
                 <p className="text-xs sm:text-sm font-mono-code font-bold text-white tracking-wider uppercase">
-                  CAPCUT · PS · AE · PR · DAVINCI
+                  CAPCUT · PS · AE
                 </p>
               </div>
             </div>
