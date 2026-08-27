@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Super';
+  src: url('/assets/font/Super.woff2') format('woff2'),
+    url('/assets/font/Super.woff') format('woff'),
+    url('/assets/font/Super.ttf') format('truetype'),
+    url('/assets/font/Super.otf') format('opentype'),
+    url('/assets/font/super.woff2') format('woff2'),
+    url('/assets/font/super.woff') format('woff'),
+    url('/assets/font/super.ttf') format('truetype'),
+    url('/assets/font/super.otf') format('opentype'),
+    url('/font/Super.ttf') format('truetype'),
+    url('/font/super.ttf') format('truetype'),
+    url('/fonts/Super.ttf') format('truetype'),
+    url('/fonts/super.ttf') format('truetype'),
+    url('./assets/font/Super.ttf') format('truetype'),
+    url('./assets/font/super.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CustomLoaderFont';
+  src: url('/assets/font/Super.woff2') format('woff2'),
+    url('/assets/font/Super.woff') format('woff'),
+    url('/assets/font/Super.ttf') format('truetype'),
+    url('/assets/font/Super.otf') format('opentype'),
+    url('/assets/font/super.woff2') format('woff2'),
+    url('/assets/font/super.woff') format('woff'),
+    url('/assets/font/super.ttf') format('truetype'),
+    url('/assets/font/super.otf') format('opentype'),
+    url('/assets/font/font.woff2') format('woff2'),
+    url('/assets/font/font.woff') format('woff'),
+    url('/assets/font/font.ttf') format('truetype'),
+    url('/assets/font/font.otf') format('opentype'),
+    url('/assets/font/loader-font.woff2') format('woff2'),
+    url('/assets/font/loader-font.ttf') format('truetype'),
+    url('/assets/font/loader-font.otf') format('opentype'),
+    url('/assets/font/custom-font.woff2') format('woff2'),
+    url('/assets/font/custom-font.ttf') format('truetype'),
+    url('/assets/font/custom-font.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --accent: #FF3E14;
+    --accent-hover: #ff5722;
+    --bg-dark: #000000;
+    --card-bg: #0A0A0A;
+    --card-border: #1A1A1A;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: none;
+  }
+}
+
+.font-display {
+  font-family: 'Bebas Neue', 'Syne', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'Space Mono', 'JetBrains Mono', monospace;
+}
+
+.font-loader-custom,
+.font-Super,
+.font-super {
+  font-family: 'Super', 'CustomLoaderFont', 'Bebas Neue', 'Space Mono', monospace;
+}
+
+/* Custom marquee animations */
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-fast {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee 18s linear infinite;
+}
+
+.animate-marquee-fast:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee-reverse 28s linear infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF3E14;
+}
+
+/* Hide scrollbar for horizontal pills */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Red drop shadow effect for cards */
+.red-drop-shadow {
+  box-shadow: 6px 6px 0px 0px #FF3E14;
+}
+
+.red-drop-shadow-sm {
+  box-shadow: 3px 3px 0px 0px #FF3E14;
+}
+
+.glow-red {
+  box-shadow: 0 0 35px -5px rgba(255, 62, 20, 0.4);
+}
