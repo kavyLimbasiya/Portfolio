@@ -38,8 +38,8 @@ export const PROFILE_CONFIG: ProfileConfig = {
 };
 
 export const AUDIO_CONFIG: AudioTrackConfig = {
-  title: 'Do I Clench my Fists ?',
-  artist: 'ridgeclub',
+  title: 'Red Circuit Protocol',
+  artist: 'DJKAVY',
   url: getAssetUrl('assets/audio/main.mp3'),
 };
 
