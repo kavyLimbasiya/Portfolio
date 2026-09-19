@@ -259,9 +259,18 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         await audio.play();
         setIsPlaying(true);
         setAudioError(null);
+        
+        if (synthRef.current) {
+          synthRef.current.stop();
+        }
+        
         return;
-      } catch {
-        // Fall back to Synth if HTML audio fails or cannot load
+      } catch (err: any) {
+        if (err.name === 'NotAllowedError') {
+          // Autoplay blocked, wait for user interaction
+          return;
+        }
+        // Otherwise fall back to Synth
       }
     }
 

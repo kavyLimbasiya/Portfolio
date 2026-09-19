@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Target, Shield, Eye } from 'lucide-react';
+import { getAssetUrl } from '../utils/assetHelper';
 
 interface InteractivePortraitProps {
   normalImage?: string;
@@ -10,8 +11,8 @@ interface InteractivePortraitProps {
 }
 
 export const InteractivePortrait: React.FC<InteractivePortraitProps> = ({
-  normalImage = '/assets/myimage.jpg',
-  scannerImage = '/assets/spiderman.jpg',
+  normalImage = '/assets/images/myimage.jpg',
+  scannerImage = '/assets/images/spiderman.jpg',
   normalLabel = 'NORMAL: PORTRAIT',
   scannerLabel = 'SCANNER: REVEAL',
   className = '',
@@ -26,15 +27,15 @@ export const InteractivePortrait: React.FC<InteractivePortraitProps> = ({
   const [lensSize, setLensSize] = useState<number>(190);
 
   // Fallback state if asset path fails
-  const [normalSrc, setNormalSrc] = useState(normalImage);
-  const [scannerSrc, setScannerSrc] = useState(scannerImage);
+  const [normalSrc, setNormalSrc] = useState(getAssetUrl(normalImage));
+  const [scannerSrc, setScannerSrc] = useState(getAssetUrl(scannerImage));
 
   useEffect(() => {
-    if (normalImage) setNormalSrc(normalImage);
+    if (normalImage) setNormalSrc(getAssetUrl(normalImage));
   }, [normalImage]);
 
   useEffect(() => {
-    if (scannerImage) setScannerSrc(scannerImage);
+    if (scannerImage) setScannerSrc(getAssetUrl(scannerImage));
   }, [scannerImage]);
 
   // Smooth lerp animation loop
@@ -116,11 +117,6 @@ export const InteractivePortrait: React.FC<InteractivePortraitProps> = ({
         src={normalSrc}
         alt="Normal Portrait"
         referrerPolicy="no-referrer"
-        onError={() => {
-          if (normalSrc !== '/assets/profile.jpg') {
-            setNormalSrc('/assets/profile.jpg');
-          }
-        }}
         className="w-full h-full object-cover object-center transition-transform duration-700"
         loading="eager"
       />
@@ -141,11 +137,6 @@ export const InteractivePortrait: React.FC<InteractivePortraitProps> = ({
           src={scannerSrc}
           alt="Spider-Man Scanner Reveal"
           referrerPolicy="no-referrer"
-          onError={() => {
-            if (scannerSrc !== '/assets/spiderman.jpg') {
-              setScannerSrc('/assets/spiderman.jpg');
-            }
-          }}
           className="w-full h-full object-cover object-center transform scale-105 brightness-110 contrast-110"
         />
 

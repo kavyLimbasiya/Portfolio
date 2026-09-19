@@ -1,3 +1,4 @@
+import { getAssetUrl } from '../utils/assetHelper';
 export interface ProfileConfig {
   name: string;
   tagline: string;
@@ -27,8 +28,8 @@ export const PROFILE_CONFIG: ProfileConfig = {
   email: 'kavylimbasiya78@gmail.com',
   phone: '+91 70960 49000',
   location: 'India, Gujarat, Rajkot',
-  portraitImage: '/assets/images/myimage.jpg',
-  scannerImage: '/assets/images/spiderman.jpg',
+  portraitImage: getAssetUrl('/assets/images/myimage.jpg'),
+  scannerImage: getAssetUrl('/assets/images/spiderman.jpg'),
   socials: {
     github: 'https://github.com/kavyLimbasiya',
     instagram: 'https://www.instagram.com/kavy_0269?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==',
@@ -39,7 +40,7 @@ export const PROFILE_CONFIG: ProfileConfig = {
 export const AUDIO_CONFIG: AudioTrackConfig = {
   title: 'Do I Clench my Fists ?',
   artist: 'ridgeclub',
-  url: 'assets/audio/main.mp3',
+  url: getAssetUrl('assets/audio/main.mp3'),
 };
 
 export interface Project {
@@ -138,8 +139,8 @@ export const PROJECTS: Project[] = [
     tag: 'ANIME EDIT',
     year: '2025',
     isReel: true,
-    image: '/assets/images/videos/16.mp4',
-    videoUrl: '/assets/images/videos/16.mp4',
+    image: getAssetUrl('/assets/images/videos/16.mp4'),
+    videoUrl: getAssetUrl('/assets/images/videos/16.mp4'),
     description: 'Demon Slayer Edit',
     deliverables: ['Anime Edit']
   },
@@ -151,8 +152,8 @@ export const PROJECTS: Project[] = [
     tag: 'CAR EDIT',
     year: '2026',
     isReel: true,
-    image: '/assets/images/videos/17.mp4',
-    videoUrl: '/assets/images/videos/17.mp4',
+    image: getAssetUrl('/assets/images/videos/17.mp4'),
+    videoUrl: getAssetUrl('/assets/images/videos/17.mp4'),
     description: 'Car Edit',
     deliverables: ['Car Edit']
   },
@@ -164,7 +165,7 @@ export const PROJECTS: Project[] = [
     tag: 'AESTHETIC POSTER',
     year: '2026',
     isReel: false,
-    image: '/assets/images/posters/20.jpg',
+    image: getAssetUrl('/assets/images/posters/20.jpg'),
     description: 'Aesthetic Poster',
     deliverables: ['Aesthetic Poster']
   },
@@ -176,7 +177,7 @@ export const PROJECTS: Project[] = [
     tag: 'POSTER',
     year: '2025',
     isReel: false,
-    image: '/assets/images/posters/16.jpg',
+    image: getAssetUrl('/assets/images/posters/16.jpg'),
     description: 'Red Eye',
     deliverables: ['Red Eye']
   },
@@ -188,8 +189,8 @@ export const PROJECTS: Project[] = [
     tag: 'CAR EDIT',
     year: '2025',
     isReel: true,
-    image: 'assets/images/videos/14.mp4',
-    videoUrl: 'assets/images/videos/14.mp4',
+    image: getAssetUrl('assets/images/videos/14.mp4'),
+    videoUrl: getAssetUrl('assets/images/videos/14.mp4'),
     description: 'Car Edit 2.0',
     deliverables: ['Car Edit 2.0']
   },
@@ -201,7 +202,7 @@ export const PROJECTS: Project[] = [
     tag: '3 IN ONE FRAME',
     year: '2025',
     isReel: false,
-    image: '/assets/images/posters/17.jpg',
+    image: getAssetUrl('/assets/images/posters/17.jpg'),
     description: '3 Spider Man In One Frame',
     deliverables: ['3 In One Frame']
   },
@@ -213,8 +214,8 @@ export const PROJECTS: Project[] = [
     tag: 'CARTOON EDIT',
     year: '2024',
     isReel: true,
-    image: 'assets/images/videos/9.mp4',
-    videoUrl: 'assets/images/videos/9.mp4',
+    image: getAssetUrl('assets/images/videos/9.mp4'),
+    videoUrl: getAssetUrl('assets/images/videos/9.mp4'),
     description: 'Cartoon Edit',
     client: 'Cartoon Edit',
     deliverables: ['Cartoon Edit']
@@ -231,7 +232,7 @@ export const TOOLKIT_ITEMS: ToolItem[] = [
     tags: ['VIDEO EDITING', 'EDITING', 'EFFECTS', 'STORYTELLING'],
     dotColor: '#ff0000',
     iconType: 'capcut',
-    iconImage: '/assets/images/capcut.png'
+    iconImage: getAssetUrl('/assets/images/capcut.png')
   },
   {
     id: 'photoshop',
@@ -242,7 +243,7 @@ export const TOOLKIT_ITEMS: ToolItem[] = [
     tags: ['POSTERS', 'COLOR GRADING', 'LAYOUT', 'RETOUCH'],
     dotColor: '#ff0000',
     iconType: 'photoshop',
-    iconImage: '/assets/images/photoshop.png'
+    iconImage: getAssetUrl('/assets/images/photoshop.png')
   },
   {
     id: 'aftereffects',
@@ -253,7 +254,7 @@ export const TOOLKIT_ITEMS: ToolItem[] = [
     tags: ['ANIMATION', 'MOTION', 'LEARNING'],
     dotColor: '#ff0000',
     iconType: 'aftereffects',
-    iconImage: '/assets/images/after-effects.png'
+    iconImage: getAssetUrl('/assets/images/after-effects.png')
   }
 ];
 
@@ -264,7 +265,7 @@ export const FEATURED_PROJECT: Project = {
   category: 'PC WALLPAPER SITE',
   tag: 'BRAND CAMPAIGN',
   year: '2025',
-  image: '/assets/images/Noiryx.jpg',
+  image: getAssetUrl('/assets/images/Noiryx.jpg'),
   description: 'Noiryx is a sleek wallpaper platform designed to deliver high-quality, aesthetic backgrounds. It offers a curated collection of images across different styles, allowing users to personalize their screens with visually stunning and modern wallpapers.',
   featured: true,
   projectUrl: 'https://kavylimbasiya.github.io/Noiryx.com/',
@@ -279,7 +280,7 @@ export const CERTIFICATES: Certificate[] = [
     issuer: 'ATMIYA UNIVERSITY',
     credentialId: '',
     year: '2024',
-    image: '/assets/images/Certificate/1.jpg',
+    image: getAssetUrl('/assets/images/Certificate/1.jpg'),
     skills: ['DIGITAL', 'POSTER', 'PRESENTATION', 'Grid Theory'],
   },
   {
@@ -289,7 +290,7 @@ export const CERTIFICATES: Certificate[] = [
     issuer: 'ATMIYA UNIVERSITY',
     credentialId: '',
     year: '2024',
-    image: '/assets/images/Certificate/2.png',
+    image: getAssetUrl('/assets/images/Certificate/2.png'),
     skills: ['DIGITAL', 'POSTER', 'LOGO', 'DESIGN'],
   },
   {
@@ -299,7 +300,7 @@ export const CERTIFICATES: Certificate[] = [
     issuer: 'GREATE LEARNING',
     credentialId: '',
     year: '2024',
-    image: '/assets/images/Certificate/3.jpg',
+    image: getAssetUrl('/assets/images/Certificate/3.jpg'),
     skills: ['DML', 'STATEMENT'],
   },
   {
@@ -309,7 +310,7 @@ export const CERTIFICATES: Certificate[] = [
     issuer: 'GREATE LEARNING',
     credentialId: '',
     year: '2024',
-    image: '/assets/images/Certificate/4.jpg',
+    image: getAssetUrl('/assets/images/Certificate/4.jpg'),
     skills: ['C++', 'TUTORIAL'],
   },
   {
@@ -319,7 +320,7 @@ export const CERTIFICATES: Certificate[] = [
     issuer: 'GREATE LEARNING',
     credentialId: '',
     year: '2025',
-    image: '/assets/images/Certificate/5.jpg',
+    image: getAssetUrl('/assets/images/Certificate/5.jpg'),
     skills: ['DATABASE', 'MANAGEMENT', 'SYSTEM'],
   },
   {
@@ -329,7 +330,7 @@ export const CERTIFICATES: Certificate[] = [
     issuer: 'ADSC',
     credentialId: '',
     year: '2025',
-    image: '/assets/images/Certificate/6.png',
+    image: getAssetUrl('/assets/images/Certificate/6.png'),
     skills: ['CODE CARNIVAL', '36 HOURS', 'HACKATHON'],
   }
 ];
@@ -340,7 +341,7 @@ export const PERSONAL_WORKS: PersonalWork[] = [
     title: 'ALL GOD IN ONE FRAME',
     medium: 'Pen Only',
     size: 'Normal Book',
-    image: '/assets/images/drawing/1.jpg',
+    image: getAssetUrl('/assets/images/drawing/1.jpg'),
     description: 's'
   },
   {
@@ -348,7 +349,7 @@ export const PERSONAL_WORKS: PersonalWork[] = [
     title: 'BERSERK Character',
     medium: 'Pen Only',
     size: 'Normal Book',
-    image: '/assets/images/drawing/2.jpg',
+    image: getAssetUrl('/assets/images/drawing/2.jpg'),
     description: ''
   },
   {
@@ -356,7 +357,7 @@ export const PERSONAL_WORKS: PersonalWork[] = [
     title: 'Castle',
     medium: 'Pen Only',
     size: 'Normal Book',
-    image: '/assets/images/drawing/3.webp',
+    image: getAssetUrl('/assets/images/drawing/3.webp'),
     description: ''
   },
   {
@@ -364,7 +365,7 @@ export const PERSONAL_WORKS: PersonalWork[] = [
     title: 'Blue Lock Anime Panel',
     medium: 'Pen Only',
     size: 'Normal Book',
-    image: '/assets/images/drawing/4.webp',
+    image: getAssetUrl('/assets/images/drawing/4.webp'),
     description: ''
   },
   {
@@ -372,7 +373,7 @@ export const PERSONAL_WORKS: PersonalWork[] = [
     title: 'Ganesha God',
     medium: 'Pen Only',
     size: 'Normal Book',
-    image: '/assets/images/drawing/5.webp',
+    image: getAssetUrl('/assets/images/drawing/5.webp'),
     description: ''
   },
 ];
@@ -426,7 +427,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'video',
     tag: 'EDIT , CAPCUT',
     year: '2024',
-    mediaUrl: 'assets/images/videos/1.mp4',
+    mediaUrl: getAssetUrl('assets/images/videos/1.mp4'),
     isVideo: true,
     duration: '0:18',
     software: ['CapCut Pro'],
@@ -438,7 +439,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'Poster',
     year: '2024',
-    mediaUrl: 'assets/images/posters/1.jpg',
+    mediaUrl: getAssetUrl('assets/images/posters/1.jpg'),
     isVideo: false,
     software: ['Picsart'],
     description: 'Make my favorite F1 team poster'
@@ -449,7 +450,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'video',
     tag: 'EDIT , CAPCUT',
     year: '2024',
-    mediaUrl: 'assets/images/videos/2.mp4',
+    mediaUrl: getAssetUrl('assets/images/videos/2.mp4'),
     isVideo: true,
     duration: '0:18',
     software: ['CapCut Pro'],
@@ -461,7 +462,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'Poster , mobile',
     year: '2024',
-    mediaUrl: 'assets/images/posters/2.jpg',
+    mediaUrl: getAssetUrl('assets/images/posters/2.jpg'),
     isVideo: false,
     software: ['Picsart'],
     description: 'Trying to make Cool Aesthetic Poster'
@@ -472,7 +473,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'video',
     tag: 'Edit , Video',
     year: '2024',
-    mediaUrl: 'assets/images/videos/3.mp4',
+    mediaUrl: getAssetUrl('assets/images/videos/3.mp4'),
     isVideo: true,
     duration: '0:19',
     software: ['Capcut Pro'],
@@ -484,7 +485,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'video',
     tag: 'Edit , Video',
     year: '2024',
-    mediaUrl: 'assets/images/videos/4.mp4',
+    mediaUrl: getAssetUrl('assets/images/videos/4.mp4'),
     isVideo: true,
     duration: '0:24',
     software: ['CapCut Pro'],
@@ -496,7 +497,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'GRAPHICS DESIGNING',
     year: '2024',
-    mediaUrl: 'assets/images/posters/3.jpg',
+    mediaUrl: getAssetUrl('assets/images/posters/3.jpg'),
     isVideo: false,
     software: ['Picsart'],
     description: 'Life is short. enjoy life.'
@@ -507,7 +508,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'GRAPHIC DESIGN',
     year: '2024',
-    mediaUrl: 'assets/images/posters/4.jpg',
+    mediaUrl: getAssetUrl('assets/images/posters/4.jpg'),
     isVideo: false,
     software: ['Picsart'],
     description: 'Make Poster of KING OF POP'
@@ -518,7 +519,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'video',
     tag: 'EDITING , CAPCUT',
     year: '2024',
-    mediaUrl: 'assets/images/videos/5.mp4',
+    mediaUrl: getAssetUrl('assets/images/videos/5.mp4'),
     isVideo: true,
     duration: '0:43',
     software: ['CapCut Pro'],
@@ -530,7 +531,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'GRAPHIC DESIGNING',
     year: '2024',
-    mediaUrl: 'assets/images/posters/5.jpg',
+    mediaUrl: getAssetUrl('assets/images/posters/5.jpg'),
     isVideo: false,
     software: ['Picsart'],
     description: 'This is Art'
@@ -541,7 +542,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'video',
     tag: 'VIDEO EDITING',
     year: '2026',
-    mediaUrl: 'assets/images/videos/6.mp4',
+    mediaUrl: getAssetUrl('assets/images/videos/6.mp4'),
     isVideo: true,
     duration: '0:32',
     software: ['CapCut Pro'],
@@ -553,7 +554,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'GRAPHIC DESIGNING',
     year: '2024',
-    mediaUrl: 'assets/images/posters/6.jpg',
+    mediaUrl: getAssetUrl('assets/images/posters/6.jpg'),
     isVideo: false,
     software: ['Picsart'],
     description: 'This is Future'
@@ -564,7 +565,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'video',
     tag: 'VIDEO EDITING',
     year: '2024',
-    mediaUrl: 'assets/images/videos/7.mp4',
+    mediaUrl: getAssetUrl('assets/images/videos/7.mp4'),
     isVideo: true,
     duration: '0:19',
     software: ['CapCut Pro'],
@@ -576,7 +577,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'GRAPHIC DESIGNING',
     year: '2024',
-    mediaUrl: 'assets/images/posters/7.jpg',
+    mediaUrl: getAssetUrl('assets/images/posters/7.jpg'),
     isVideo: false,
     software: ['Picsart'],
     description: 'Michelangelo David. Power of Money'
@@ -587,7 +588,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'video',
     tag: 'EDITING',
     year: '2024',
-    mediaUrl: 'assets/images/videos/8.mp4',
+    mediaUrl: getAssetUrl('assets/images/videos/8.mp4'),
     isVideo: true,
     duration: '0:38',
     software: ['CapCut Pro'],
@@ -599,7 +600,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'GRAPHIC DESIGN',
     year: '2024',
-    mediaUrl: 'assets/images/posters/8.jpg',
+    mediaUrl: getAssetUrl('assets/images/posters/8.jpg'),
     isVideo: false,
     software: ['Picsart'],
     description: 'Beauty of Queen'
@@ -610,7 +611,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'video',
     tag: 'EDITING',
     year: '2024',
-    mediaUrl: 'assets/images/videos/9.mp4',
+    mediaUrl: getAssetUrl('assets/images/videos/9.mp4'),
     isVideo: true,
     duration: '0:36',
     software: ['CapCut Pro'],
@@ -622,7 +623,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'GRAPHIC DESIGN',
     year: '2024',
-    mediaUrl: 'assets/images/posters/9.jpg',
+    mediaUrl: getAssetUrl('assets/images/posters/9.jpg'),
     isVideo: false,
     software: ['Picsart'],
     description: 'Old Style edit'
@@ -633,7 +634,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'video',
     tag: 'VIDEO EDITING',
     year: '2025',
-    mediaUrl: 'assets/images/videos/10.mp4',
+    mediaUrl: getAssetUrl('assets/images/videos/10.mp4'),
     isVideo: true,
     duration: '0:30',
     software: ['CapCut Pro'],
@@ -645,7 +646,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'GRAPHIC DESIGN',
     year: '2024',
-    mediaUrl: 'assets/images/posters/10.png',
+    mediaUrl: getAssetUrl('assets/images/posters/10.png'),
     isVideo: false,
     software: ['Picsart'],
     description: 'Astronaut is chilling'
@@ -656,7 +657,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'video',
     tag: 'VIDEO EDITING',
     year: '2025',
-    mediaUrl: 'assets/images/videos/11.mp4',
+    mediaUrl: getAssetUrl('assets/images/videos/11.mp4'),
     isVideo: true,
     duration: '0:17',
     software: ['CapCut Pro'],
@@ -668,7 +669,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'GRAPHIC DESIGN',
     year: '2024',
-    mediaUrl: 'assets/images/posters/11.jpg',
+    mediaUrl: getAssetUrl('assets/images/posters/11.jpg'),
     isVideo: false,
     software: ['Picsart'],
     description: 'Motivational Poster. Chase Your Dream'
@@ -679,7 +680,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'GRAPHIC DESIGN',
     year: '2024',
-    mediaUrl: 'assets/images/posters/12.jpg',
+    mediaUrl: getAssetUrl('assets/images/posters/12.jpg'),
     isVideo: false,
     software: ['Picsart'],
     description: 'In to Deep'
@@ -690,7 +691,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'video',
     tag: 'VIDEO EDITING',
     year: '2025',
-    mediaUrl: 'assets/images/videos/12.mp4',
+    mediaUrl: getAssetUrl('assets/images/videos/12.mp4'),
     isVideo: true,
     duration: '0:23',
     software: ['CapCut Pro'],
@@ -702,7 +703,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'GRAPHIC DESIGN',
     year: '2024',
-    mediaUrl: 'assets/images/posters/13.jpg',
+    mediaUrl: getAssetUrl('assets/images/posters/13.jpg'),
     isVideo: false,
     software: ['Picsart'],
     description: 'Nature is Beautiful'
@@ -713,7 +714,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'video',
     tag: 'VIDEO EDITING',
     year: '2025',
-    mediaUrl: 'assets/images/videos/13.mp4',
+    mediaUrl: getAssetUrl('assets/images/videos/13.mp4'),
     isVideo: true,
     duration: '0:27',
     software: ['CapCut Pro'],
@@ -725,7 +726,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'GRAPHIC DESIGN',
     year: '2024',
-    mediaUrl: 'assets/images/posters/14.jpg',
+    mediaUrl: getAssetUrl('assets/images/posters/14.jpg'),
     isVideo: false,
     software: ['Picsart'],
     description: 'Time is Art. Art is Beauty'
@@ -736,7 +737,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'video',
     tag: 'VIDEO EDITING',
     year: '2025',
-    mediaUrl: 'assets/images/videos/14.mp4',
+    mediaUrl: getAssetUrl('assets/images/videos/14.mp4'),
     isVideo: true,
     duration: '0:39',
     software: ['CapCut Pro'],
@@ -748,7 +749,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'GRAPHIC DESIGN',
     year: '2025',
-    mediaUrl: 'assets/images/posters/15.jpg',
+    mediaUrl: getAssetUrl('assets/images/posters/15.jpg'),
     isVideo: false,
     software: ['Photoshop'],
     description: 'My 1st Photoshop Poster'
@@ -759,7 +760,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'GRAPHIC DESIGN',
     year: '2026',
-    mediaUrl: 'assets/images/posters/16.jpg',
+    mediaUrl: getAssetUrl('assets/images/posters/16.jpg'),
     isVideo: false,
     software: ['Photoshop'],
     description: 'Y2K style Poster'
@@ -770,7 +771,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'video',
     tag: 'VIDEO EDITING',
     year: '2026',
-    mediaUrl: 'assets/images/videos/15.mp4',
+    mediaUrl: getAssetUrl('assets/images/videos/15.mp4'),
     isVideo: true,
     duration: '0:40',
     software: ['CapCut Pro'],
@@ -782,7 +783,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'GRAPHIC DESIGN',
     year: '2026',
-    mediaUrl: 'assets/images/posters/17.jpg',
+    mediaUrl: getAssetUrl('assets/images/posters/17.jpg'),
     isVideo: false,
     software: ['Photoshop'],
     description: 'All 3 Spider man version in one frame'
@@ -793,7 +794,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'video',
     tag: 'VIDEO EDITING',
     year: '2026',
-    mediaUrl: 'assets/images/videos/16.mp4',
+    mediaUrl: getAssetUrl('assets/images/videos/16.mp4'),
     isVideo: true,
     duration: '0:50',
     software: ['CapCut Pro'],
@@ -805,7 +806,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'GRAPHIC DESIGN',
     year: '2026',
-    mediaUrl: 'assets/images/posters/18.jpg',
+    mediaUrl: getAssetUrl('assets/images/posters/18.jpg'),
     isVideo: false,
     software: ['Photoshop'],
     description: 'Dare Devil is Snow Boarding.'
@@ -816,7 +817,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'video',
     tag: 'VIDEO EDITING',
     year: '2026',
-    mediaUrl: 'assets/images/videos/17.mp4',
+    mediaUrl: getAssetUrl('assets/images/videos/17.mp4'),
     isVideo: true,
     duration: '0:26',
     software: ['CapCut Pro'],
@@ -828,7 +829,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'GRAPHIC DESIGN',
     year: '2026',
-    mediaUrl: 'assets/images/posters/19.jpg',
+    mediaUrl: getAssetUrl('assets/images/posters/19.jpg'),
     isVideo: false,
     software: ['Photoshop'],
     description: 'Max verstappen Poster'
@@ -839,7 +840,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'video',
     tag: 'MOTION EDITING',
     year: '2026',
-    mediaUrl: 'assets/images/videos/18.mp4',
+    mediaUrl: getAssetUrl('assets/images/videos/18.mp4'),
     isVideo: true,
     duration: '0:34',
     software: ['After Effects'],
@@ -851,7 +852,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     category: 'still',
     tag: 'GRAPHIC DESIGN',
     year: '2026',
-    mediaUrl: 'assets/images/posters/20.jpg',
+    mediaUrl: getAssetUrl('assets/images/posters/20.jpg'),
     isVideo: false,
     software: ['Photoshop'],
     description: '3 Machine in one frame'
