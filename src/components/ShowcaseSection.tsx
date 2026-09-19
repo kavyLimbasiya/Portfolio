@@ -208,8 +208,16 @@ export const ShowcaseSection: React.FC<ShowcaseSectionProps> = ({ onSelectMedia 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.35, delay: (idx % 4) * 0.06 }}
-                onMouseEnter={() => setHoveredItemId(item.id)}
-                onMouseLeave={() => setHoveredItemId(null)}
+                onMouseEnter={(e) => {
+                  setHoveredItemId(item.id);
+                  const video = e.currentTarget.querySelector('video');
+                  if (video) video.play().catch(() => {});
+                }}
+                onMouseLeave={(e) => {
+                  setHoveredItemId(null);
+                  const video = e.currentTarget.querySelector('video');
+                  if (video) video.pause();
+                }}
                 onClick={() => onSelectMedia(item)}
                 className="break-inside-avoid mb-6 group relative bg-[#0A0A0A] border border-neutral-900 overflow-hidden cursor-pointer hover:border-neutral-700 transition-all duration-300 flex flex-col justify-between"
                 data-cursor={item.isVideo ? 'media' : 'image'}

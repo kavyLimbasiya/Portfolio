@@ -53,14 +53,20 @@ export const SelectedWork: React.FC<SelectedWorkProps> = ({ onSelectProject, onO
             return (
               <div
                 key={project.id}
-                onMouseEnter={() => setHoveredProjectId(project.id)}
-                onMouseLeave={() => setHoveredProjectId(null)}
-                onClick={() => {
-                  if (project.isReel) {
-                    onOpenReel();
-                  } else {
-                    onSelectProject(project);
+                onMouseEnter={(e) => {
+                  setHoveredProjectId(project.id);
+                  const video = e.currentTarget.querySelector('video');
+                  if (video) video.play().catch(() => {});
+                }}
+                onMouseLeave={(e) => {
+                  setHoveredProjectId(null);
+                  const video = e.currentTarget.querySelector('video');
+                  if (video) {
+                    video.pause();
                   }
+                }}
+                onClick={() => {
+                  onSelectProject(project);
                 }}
                 className="break-inside-avoid mb-6 lg:mb-8 group relative bg-[#0A0A0A] border border-neutral-900 overflow-hidden cursor-pointer flex flex-col justify-between hover:border-neutral-700 transition-all duration-300 shadow-lg"
               >

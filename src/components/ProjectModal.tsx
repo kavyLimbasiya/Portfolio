@@ -99,9 +99,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         <div className="p-5 sm:p-8 space-y-8">
 
           {/* Main Media Player / Image */}
-          <div className="relative aspect-[16/9] w-full overflow-hidden bg-neutral-950 border border-neutral-800 group">
+          <div className="relative w-full max-h-[75vh] flex items-center justify-center bg-black border border-neutral-800 group overflow-hidden">
             {project.videoUrl && showVideo ? (
-              <div className="relative w-full h-full">
+              <div className="relative w-full h-full flex items-center justify-center">
                 <video
                   ref={videoRef}
                   src={resolveMediaUrl(project.videoUrl)}
@@ -112,7 +112,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                   onPlay={handleVideoPlay}
                   onPause={handleVideoPause}
                   onEnded={handleVideoEnded}
-                  className="w-full h-full object-cover"
+                  className="max-h-[75vh] w-auto h-auto max-w-full object-contain"
                 />
 
                 {/* Big Center Play/Pause button */}
@@ -149,7 +149,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               <img
                 src={resolveMediaUrl(project.image)}
                 alt={project.title}
-                className="w-full h-full object-cover"
+                className="max-h-[75vh] w-auto h-auto max-w-full object-contain"
               />
             ) : (
               <div className="w-full h-full flex items-center justify-center bg-neutral-900 text-neutral-600 font-mono-code text-xs">

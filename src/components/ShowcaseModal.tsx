@@ -139,7 +139,7 @@ export const ShowcaseModal: React.FC<ShowcaseModalProps> = ({ item, onClose }) =
           {/* Body Content */}
           <div className="flex-1 overflow-y-auto">
             {/* Media Canvas Area */}
-            <div className="relative aspect-[16/9] w-full bg-black flex items-center justify-center overflow-hidden border-b border-neutral-900">
+            <div className="relative w-full max-h-[75vh] bg-black flex items-center justify-center overflow-hidden border-b border-neutral-900">
               {item.isVideo ? (
                 <>
                   <video
@@ -150,7 +150,7 @@ export const ShowcaseModal: React.FC<ShowcaseModalProps> = ({ item, onClose }) =
                     loop
                     muted={isMuted}
                     playsInline
-                    className="w-full h-full object-contain"
+                    className="max-h-[75vh] w-auto h-auto max-w-full object-contain"
                   />
                   {/* Floating Video Controls */}
                   <div className="absolute bottom-4 left-4 right-4 p-3 bg-black/80 backdrop-blur-md border border-neutral-800 flex items-center justify-between text-xs font-mono-code z-20">
