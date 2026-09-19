@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ShowcaseItem } from '../data/portfolioData';
-import { X, Play, Pause, Volume2, VolumeX, Maximize2, Sparkles, Film, Image as ImageIcon, Layers, Share2, Check } from 'lucide-react';
+import { X, Play, Pause, Volume2, VolumeX, Maximize2, Sparkles, Film, Image as ImageIcon, Layers, Share2, Check, ArrowUpRight, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useAudio } from '../context/AudioContext';
 
@@ -214,6 +214,22 @@ export const ShowcaseModal: React.FC<ShowcaseModalProps> = ({ item, onClose }) =
               <p className="text-sm sm:text-base font-mono-code text-neutral-300 leading-relaxed max-w-3xl">
                 {item.description}
               </p>
+
+              {/* Direct Project Website Redirection Button */}
+              {item.projectUrl && (
+                <div className="pt-2">
+                  <a
+                    href={item.projectUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2.5 bg-[#FF3E14] text-black font-mono-code font-bold text-xs uppercase px-5 py-3 hover:bg-white transition-all duration-200 group shadow-lg"
+                  >
+                    <Globe size={15} />
+                    <span>{item.linkText || 'VISIT PROJECT WEBSITE'}</span>
+                    <ArrowUpRight size={15} className="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </a>
+                </div>
+              )}
 
               {/* Technical Specifications Breakdown */}
               {item.software && item.software.length > 0 && (

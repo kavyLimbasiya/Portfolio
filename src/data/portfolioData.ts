@@ -56,6 +56,8 @@ export interface Project {
   videoUrl?: string;
   isReel?: boolean;
   featured?: boolean;
+  projectUrl?: string; // ✅ Supported
+  linkText?: string;   // ✅ Supported
 }
 
 export interface ToolItem {
@@ -107,6 +109,8 @@ export interface ShowcaseItem {
   client?: string;
   description: string;
   aspectRatio?: 'tall' | 'wide' | 'square' | 'standard' | 'portrait';
+  projectUrl?: string; // ✅ Supported
+  linkText?: string;   // ✅ Supported
 }
 
 export interface Testimonial {
@@ -262,7 +266,9 @@ export const FEATURED_PROJECT: Project = {
   year: '2025',
   image: '/assets/images/Noiryx.jpg',
   description: 'Noiryx is a sleek wallpaper platform designed to deliver high-quality, aesthetic backgrounds. It offers a curated collection of images across different styles, allowing users to personalize their screens with visually stunning and modern wallpapers.',
-  featured: true
+  featured: true,
+  projectUrl: 'https://kavylimbasiya.github.io/Noiryx.com/',
+  linkText: 'VISIT WEBSITE'
 };
 
 export const CERTIFICATES: Certificate[] = [

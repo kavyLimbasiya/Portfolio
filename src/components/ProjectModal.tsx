@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Project } from '../data/portfolioData';
-import { X, ArrowUpRight, Check, Play, Pause, Volume2, VolumeX, Video } from 'lucide-react';
+import { X, ArrowUpRight, Check, Play, Pause, Volume2, VolumeX, Video, ExternalLink, Globe } from 'lucide-react';
 import { useAudio } from '../context/AudioContext';
 
 interface ProjectModalProps {
@@ -159,7 +159,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </div>
 
           {/* Title & Year */}
-          <div className="space-y-3">
+          <div className="space-y-4">
             <div className="flex items-baseline justify-between flex-wrap gap-2">
               <h2 className="text-2xl sm:text-4xl md:text-5xl font-black font-display tracking-tight text-white uppercase">
                 {project.title}
@@ -172,6 +172,22 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             <p className="text-xs sm:text-base font-mono-code text-neutral-300 leading-relaxed pt-2">
               {project.description}
             </p>
+
+            {/* Direct Project Website Link Button */}
+            {project.projectUrl && (
+              <div className="pt-2">
+                <a
+                  href={project.projectUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 bg-[#FF3E14] text-black font-mono-code font-bold text-xs uppercase px-5 py-3 hover:bg-white transition-all duration-200 group shadow-lg"
+                >
+                  <Globe size={15} />
+                  <span>{project.linkText || 'VISIT PROJECT WEBSITE'}</span>
+                  <ArrowUpRight size={15} className="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </a>
+              </div>
+            )}
           </div>
 
           {/* Project Details Grid */}
@@ -206,14 +222,27 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         </div>
 
         {/* Footer */}
-        <div className="p-4 sm:p-6 bg-neutral-950 border-t border-neutral-800 flex items-center justify-between">
+        <div className="p-4 sm:p-6 bg-neutral-950 border-t border-neutral-800 flex items-center justify-between flex-wrap gap-3">
           <span className="text-[11px] font-mono-code text-neutral-500">LIMBASIYA KAVY ARCHIVE</span>
-          <button
-            onClick={handleClose}
-            className="bg-[#FF3E14] text-black font-mono-code font-bold text-xs uppercase px-6 py-2.5 hover:bg-white transition-colors"
-          >
-            CLOSE CASE STUDY
-          </button>
+          <div className="flex items-center gap-3">
+            {project.projectUrl && (
+              <a
+                href={project.projectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#FF3E14] text-black font-mono-code font-bold text-xs uppercase px-5 py-2.5 hover:bg-white transition-colors inline-flex items-center gap-1.5"
+              >
+                <span>{project.linkText || 'VISIT SITE'}</span>
+                <ArrowUpRight size={14} />
+              </a>
+            )}
+            <button
+              onClick={handleClose}
+              className="bg-neutral-900 border border-neutral-700 text-white font-mono-code font-bold text-xs uppercase px-5 py-2.5 hover:bg-neutral-800 hover:border-neutral-500 transition-colors"
+            >
+              CLOSE CASE STUDY
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { FEATURED_PROJECT, Project } from '../data/portfolioData';
-import { ArrowUpRight, Play, Pause, Eye, Film, Volume2, VolumeX } from 'lucide-react';
+import { ArrowUpRight, Play, Pause, Eye, Film, Volume2, VolumeX, Globe } from 'lucide-react';
 import { useAudio } from '../context/AudioContext';
 
 interface FeaturedProjectsProps {
@@ -159,6 +159,23 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ onSelectProj
               <p className="text-xs sm:text-sm font-mono-code text-neutral-400 leading-relaxed pt-2">
                 {FEATURED_PROJECT.description}
               </p>
+
+              {/* Direct Project Website Link Button */}
+              {FEATURED_PROJECT.projectUrl && (
+                <div className="pt-2">
+                  <a
+                    href={FEATURED_PROJECT.projectUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center gap-2 bg-[#FF3E14] text-black font-mono-code font-bold text-xs uppercase px-4 py-2.5 hover:bg-white transition-all duration-200 shadow-md group/btn"
+                  >
+                    <Globe size={14} />
+                    <span>{FEATURED_PROJECT.linkText || 'VISIT PROJECT WEBSITE'}</span>
+                    <ArrowUpRight size={14} className="transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                  </a>
+                </div>
+              )}
             </div>
 
             {/* Deliverables tags & Action */}
