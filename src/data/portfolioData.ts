@@ -29,7 +29,7 @@ export const PROFILE_CONFIG: ProfileConfig = {
   phone: '+91 70960 49000',
   location: 'India, Gujarat, Rajkot',
   portraitImage: getAssetUrl('/assets/images/myimage.jpg'),
-  scannerImage: getAssetUrl('/assets/images/spiderman.jpg'),
+  scannerImage: getAssetUrl('/assets/images/myimage2.jpg'),
   socials: {
     github: 'https://github.com/kavyLimbasiya',
     instagram: 'https://www.instagram.com/kavy_0269?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==',
