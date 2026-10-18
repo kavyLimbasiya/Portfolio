@@ -258,19 +258,42 @@ export const TOOLKIT_ITEMS: ToolItem[] = [
   }
 ];
 
-export const FEATURED_PROJECT: Project = {
-  id: 'featured-project-01',
-  number: 'P/01',
-  title: 'NOIRYX',
-  category: 'PC WALLPAPER SITE',
-  tag: 'BRAND CAMPAIGN',
-  year: '2025',
-  image: getAssetUrl('/assets/images/Noiryx.jpg'),
-  description: 'Noiryx is a sleek wallpaper platform designed to deliver high-quality, aesthetic backgrounds. It offers a curated collection of images across different styles, allowing users to personalize their screens with visually stunning and modern wallpapers.',
-  featured: true,
-  projectUrl: 'https://kavylimbasiya.github.io/Noiryx.com/',
-  linkText: 'VISIT WEBSITE'
-};
+export const FEATURED_PROJECTS: Project[] = [
+  {
+    id: 'featured-project-01',
+    number: 'P/01',
+    title: 'NOIRYX',
+    category: 'PC WALLPAPER SITE',
+    tag: 'BRAND CAMPAIGN',
+    year: '2025',
+    image: getAssetUrl('/assets/images/Noiryx.jpg'),
+    description: 'Noiryx is a sleek wallpaper platform designed to deliver high-quality, aesthetic backgrounds. It offers a curated collection of images across different styles, allowing users to personalize their screens with visually stunning and modern wallpapers.',
+    featured: true,
+    projectUrl: 'https://kavylimbasiya.github.io/Noiryx.com/',
+    linkText: 'VISIT WEBSITE',
+    deliverables: ['UI/UX DESIGN', 'WEB PLATFORM', 'CURATED ARCHIVE'],
+    client: 'PERSONAL PROJECT'
+  },
+  {
+    id: 'featured-project-02',
+    number: 'P/02',
+    title: 'SAMURAI',
+    category: 'INTERACTIVE WEBSITE',
+    tag: 'WEB EXPERIENCE',
+    year: '2026',
+    image: getAssetUrl('/assets/images/Samurai.jpg'),
+    description: 'Samurai is a modern interactive web experience featuring cinematic video scrubbing, typewriter typography, dual dark and light themes, and a minimalist martial-blade design aesthetic.',
+    featured: true,
+    projectUrl: 'https://kavylimbasiya.github.io/Samurai/',
+    linkText: 'VISIT WEBSITE',
+    deliverables: ['UI/UX DESIGN', 'INTERACTIVE WEB', 'VIDEO SCRUBBING', 'RESPONSIVE'],
+    client: 'PERSONAL PROJECT'
+  }
+];
+
+export const FEATURED_PROJECT: Project = FEATURED_PROJECTS[0];
+export const SAMURAI_PROJECT: Project = FEATURED_PROJECTS[1];
+
 
 export const CERTIFICATES: Certificate[] = [
   {
